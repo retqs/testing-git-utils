@@ -13,7 +13,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "npx jest --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,5 +41,11 @@
     "@testing-library/react": "^16.2.0",
     "babel-jest": "^29.7.0",
     "jest": "^27.5.1"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom"
+    ]
   }
 }
